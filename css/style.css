@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Lato', sans-serif;
+}
+
 #root {
     display: flex;
     width: 100%;
@@ -17,6 +21,18 @@
     margin: auto;   
 }
 
+.left {
+    float: left;
+    width: 35%;
+    height: 100%;
+}
+
+.right {
+    width: 65%;
+    height: 100%;
+    float: left;
+}
+
 
 
 
@@ -28,4 +44,12 @@
 /* debug */
 .debug .container {
     background: yellow;
+}
+
+.debug .left {
+    background-color: yellowgreen;
+}
+
+.debug .right {
+    background-color: violet;
 }
