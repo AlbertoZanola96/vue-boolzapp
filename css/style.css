@@ -52,8 +52,12 @@ body{
 }
 
 #ricerca {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
     height: 5%;
+    background-color: #FAFAFA;
 }
 
 #contatti {
@@ -104,6 +108,25 @@ body{
     color: #4F7485;
     font-size: 13px;
 }
+
+.search {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    height: 70%;
+    background-color: #FFFFFF;
+}
+
+.search :first-child {
+    margin-left: 30px;
+    color: #B1B1B1;
+}
+
+.search :last-child {
+    width: 400px;
+    margin-left: 20px;
+    border: none;
+}
 /* fine left */
 
 /* right */
@@ -152,9 +175,9 @@ body{
     background-color: red;
 } */
 
-.debug #ricerca {
+/* .debug #ricerca {
     background-color: orange;
-}
+} */
 
 .debug #contatti {
     background-color: green;
