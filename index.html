@@ -40,21 +40,9 @@
                     </div>
                 </div>
                 <div id="contatti">
-                    <div class="avatar">
-                        <img class="immaginibottom" src="img/avatar_1.jpg" alt="">
-                        <span>Michele</span>
-                    </div>
-                    <div class="avatar">
-                        <img class="immaginibottom" src="img/avatar_2.jpg" alt="">
-                        <span>Fabio</span>
-                    </div>
-                    <div class="avatar">
-                        <img class="immaginibottom" src="img/avatar_3.jpg" alt="">
-                        <span>Samuele</span>
-                    </div>
-                    <div class="avatar">
-                        <img class="immaginibottom" src="img/avatar_4.jpg" alt="">
-                        <span>Luisa</span>
+                    <div class="avatar" v-for='contatto in contacts'>
+                        <img class="immaginibottom" :src="getimgsrc(contatto)" alt="">
+                        <span>{{contatto.name}}</span>
                     </div>
                 </div>
             </div>

@@ -186,6 +186,12 @@ body{
     margin-left: 640px;
 }
 
+#chat {
+    background-image: url(../img/mine.jpg);
+    z-index: 999;
+    overflow-y: scroll;
+}
+
 
 
 
@@ -199,9 +205,9 @@ body{
     background-color: yellowgreen;
 } */
 
-.debug .right {
+/* .debug .right {
     background-color: violet;
-}
+} */
 
 /* .debug #utente {
     background-color: blue;
@@ -223,9 +229,9 @@ body{
     background-color: grey;
 } */
 
-.debug #chat {
+/* .debug #chat {
     background-color: indigo;
-}
+} */
 
 .debug #scrivi {
     background-color: brown;

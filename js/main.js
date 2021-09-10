@@ -86,5 +86,10 @@ var app = new Vue ({
             },
         ],
     },
+    methods: {
+        getimgsrc(contatto) {
+            return `img/avatar${contatto.avatar}.jpg`;
+        }
+    }
 })
 
