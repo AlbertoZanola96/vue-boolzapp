@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div id="contatti">
-                    <div class="avatar" v-for='contatto in contacts'>
+                    <div class="avatar" v-for='(contatto, index) in contacts' @click='changeavatar(index)'>
                         <img class="immaginibottom" :src="getimgsrc(contatto)" alt="">
                         <span>{{contatto.name}}</span>
                     </div>
@@ -49,10 +49,10 @@
             <div class="right">
                 <div id="contattoAttivo">
                     <div class="chatattiva">
-                        <img class="immaginiTop" src="img/avatar_1.jpg" alt="">
+                        <img class="immaginiTop" :src="`img/avatar${contacts[currentActiveUser].avatar}.jpg`" alt="">
                     </div>
                     <div class="chatattivatesto">
-                        <p>Michele</p>
+                        <p>{{ contacts[currentActiveUser].name }}</p>
                         <p>Ultimo acesso oggi alle</p>
                     </div>
                     <div class="iconechat">

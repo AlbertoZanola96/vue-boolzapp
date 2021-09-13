@@ -85,11 +85,15 @@ var app = new Vue ({
                 ],
             },
         ],
+        currentActiveUser: 0,
     },
     methods: {
         getimgsrc(contatto) {
             return `img/avatar${contatto.avatar}.jpg`;
-        }
+        },
+        changeavatar(index) {
+            this.currentActiveUser = index;
+        },
     }
 })
 

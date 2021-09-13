@@ -87,6 +87,10 @@ body{
     overflow-y: scroll;
 }
 
+#contatti :hover {
+    background-color: rgb(233, 233, 233);
+}
+
 #utente > span {
     display: flex;
     align-items: center;
@@ -157,7 +161,7 @@ body{
     align-items: center;
     width: 100%;
     height: 10%;
-    border-left: 1px solid #B1B1B1;
+    border-left: 1px solid #cccccc;
     background-color: #EAEAEA;
 }
 
@@ -205,13 +209,13 @@ body{
 #scrivi :first-child {
     margin-left: 50px;
     font-size: 25px;
-    color: #B1B1B1;
+    color: #6B7376;
 }
 
 #scrivi :last-child {
     margin-right: 50px;
     font-size: 25px;
-    color: #B1B1B1;
+    color: #6B7376;
 }
 
 
