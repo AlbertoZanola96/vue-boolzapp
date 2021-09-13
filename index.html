@@ -19,7 +19,7 @@
                     <img class="immaginiTop" src="img/avatar_io.jpg" alt="">
                     <span>Alberto Zanola</span>
                     <div class="iconeSinistra">
-                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-circle-notch" @click='sent()'></i>
                         <i class="fas fa-comment-alt"></i>
                         <i class="fas fa-ellipsis-v"></i>
                     </div>
@@ -62,14 +62,14 @@
                     </div>  
                 </div>
                 <div id="chat">
-                    <div class="inviato">
+                    <div class="inviato" v-for='messaggi in contacts[currentActiveUser].messages'>
                         <div class="verde">
-                            <p>ciao</p>
+                            <p :class="messaggi.status">{{messaggi.message}}</p>
                         </div>
                     </div>
-                    <div class="ricevuto">
+                    <div class="ricevuto" >
                         <div class="bianco">
-                            <p>ciao</p> 
+                            <p></p> 
                         </div>
                     </div>
                 </div>

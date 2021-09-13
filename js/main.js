@@ -95,6 +95,5 @@ var app = new Vue ({
             this.currentActiveUser = index;
         },
     }
-})
+});
 
-me
