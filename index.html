@@ -65,13 +65,13 @@
                     <div class="inviato" v-for='(messaggi, index) in contacts[currentActiveUser].messages' :class='messageStatus(index)'>
                         <div class="messaggi">
                             <p>{{messaggi.message}}</p>
-                            <p class="data">{{messaggi.date}}</p>
+                            <p class="dat">{{messaggi.date}}</p>
                         </div>
                     </div>
                 </div>
                 <div id="scrivi">
                     <i class="far fa-smile"></i>
-                    <input type="text" name="" id="" placeholder=" Scrivi un messaggio">
+                    <input type="text" name="" id=""  placeholder=" Scrivi un messaggio" v-model="newMessage" @keyUp.enter="addMessage">
                     <i class="fas fa-microphone"></i>
                 </div>
             </div>

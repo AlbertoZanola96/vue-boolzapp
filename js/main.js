@@ -86,6 +86,7 @@ var app = new Vue ({
             },
         ],
         currentActiveUser: 0,
+        newMessage: "",
     },
     methods: {
         getimgsrc(contatto) {
@@ -98,8 +99,19 @@ var app = new Vue ({
             let contattoOn = this.contacts[this.currentActiveUser];
             let messageClass ='messaggi ' + contattoOn.messages[index].status; //passo la classe messaggi e lo status
             return messageClass;
-
-        }
+        },
+        addMessage() {
+            console.log(this.currentActiveUser);
+            if(this.newMessage != "") {
+                this.contacts[this.currentActiveUser].messages.push({
+                    date: "00/00/0000 00:00:00",
+                    message: this.newMessage,
+                    status: 'sent',
+                });  
+            }
+            this.newMessage = "";
+            
+        },
     }
 });
 
