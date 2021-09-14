@@ -94,6 +94,12 @@ var app = new Vue ({
         changeavatar(index) {
             this.currentActiveUser = index;
         },
+        messageStatus(index) {
+            let contattoOn = this.contacts[this.currentActiveUser];
+            let messageClass ='messaggi ' + contattoOn.messages[index].status; //passo la classe messaggi e lo status
+            return messageClass;
+
+        }
     }
 });
 

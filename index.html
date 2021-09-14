@@ -49,7 +49,7 @@
             <div class="right">
                 <div id="contattoAttivo">
                     <div class="chatattiva">
-                        <img class="immaginiTop" :src="`img/avatar${contacts[currentActiveUser].avatar}.jpg`" alt="">
+                        <img class="immaginiTop" :src="'img/avatar' + contacts[currentActiveUser].avatar + '.jpg'" alt="">
                     </div>
                     <div class="chatattivatesto">
                         <p>{{ contacts[currentActiveUser].name }}</p>
@@ -62,14 +62,10 @@
                     </div>  
                 </div>
                 <div id="chat">
-                    <div class="inviato" v-for='messaggi in contacts[currentActiveUser].messages'>
-                        <div class="verde">
+                    <div class="inviato" v-for='(messaggi, index) in contacts[currentActiveUser].messages' :class='messageStatus(index)'>
+                        <div class="messaggi">
                             <p>{{messaggi.message}}</p>
-                        </div>
-                    </div>
-                    <div class="ricevuto" >
-                        <div class="bianco">
-                            <p></p> 
+                            <p class="data">{{messaggi.date}}</p>
                         </div>
                     </div>
                 </div>
