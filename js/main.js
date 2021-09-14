@@ -109,9 +109,17 @@ var app = new Vue ({
                     status: 'sent',
                 });  
             }
-            this.newMessage = "";
-            
+            this.newMessage = "";  
         },
+        risposta() {
+            setTimeout(() => {
+                this.contacts[this.currentActiveUser].messages.push({
+                    date: dayjs().format("DD/MM/YYYY hh:mm:ss"),
+                    message: 'ok',
+                    status: 'received',
+                })
+            }, 1000);
+        }
     }
 });
 

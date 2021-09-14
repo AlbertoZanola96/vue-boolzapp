@@ -71,7 +71,7 @@
                 </div>
                 <div id="scrivi">
                     <i class="far fa-smile"></i>
-                    <input type="text" name="" id=""  placeholder=" Scrivi un messaggio" v-model="newMessage" @keyUp.enter="addMessage">
+                    <input type="text" name="" id=""  placeholder=" Scrivi un messaggio" v-model="newMessage" @keyDown.enter="addMessage()" @keyUp.enter="risposta()" >
                     <i class="fas fa-microphone"></i>
                 </div>
             </div>
