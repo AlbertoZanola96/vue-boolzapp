@@ -87,6 +87,8 @@ var app = new Vue ({
         ],
         currentActiveUser: 0,
         newMessage: "",
+        ricercaContatti: "",
+        contattoTrovato: "",
     },
     methods: {
         getimgsrc(contatto) {
@@ -101,7 +103,6 @@ var app = new Vue ({
             return messageClass;
         },
         addMessage() {
-            console.log(this.currentActiveUser);
             if(this.newMessage != "") {
                 this.contacts[this.currentActiveUser].messages.push({
                     date: dayjs().format("DD/MM/YYYY hh:mm:ss"),
@@ -119,7 +120,10 @@ var app = new Vue ({
                     status: 'received',
                 })
             }, 1000);
-        }
+        },
+        ricerca() {
+            return this.contacts.filter(x => x.name.toLowerCase().includes(this.contattoTrovato.toLowerCase()));
+        },
     }
 });
 

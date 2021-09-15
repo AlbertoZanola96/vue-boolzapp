@@ -36,11 +36,11 @@
                 <div id="ricerca">
                     <div class="search">
                         <i class="fas fa-search"></i> 
-                        <input type="search" name="" id="" placeholder="Cerca o inizia una nuova chat">
+                        <input type="search" placeholder="Cerca o inizia una nuova chat" v-model="contattoTrovato" @keyUp="ricerca()">
                     </div>
                 </div>
                 <div id="contatti">
-                    <div class="avatar" v-for='(contatto, index) in contacts' @click='changeavatar(index)'>
+                    <div class="avatar" v-for='(contatto, index) in ricerca()' @click='changeavatar(index)'>
                         <img class="immaginibottom" :src="getimgsrc(contatto)" alt="">
                         <span>{{contatto.name}}</span>
                     </div>
@@ -65,7 +65,7 @@
                     <div class="inviato" v-for='(messaggi, index) in contacts[currentActiveUser].messages' :class='messageStatus(index)'>
                         <div class="messaggi">
                             <p>{{messaggi.message}}</p>
-                            <p class="dat">{{messaggi.date}}</p>
+                            <p class="data">{{messaggi.date}}</p>
                         </div>
                     </div>
                 </div>
