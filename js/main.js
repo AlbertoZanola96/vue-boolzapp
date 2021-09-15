@@ -87,7 +87,6 @@ var app = new Vue ({
         ],
         currentActiveUser: 0,
         newMessage: "",
-        ricercaContatti: "",
         contattoTrovato: "",
     },
     methods: {
